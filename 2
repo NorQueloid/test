@@ -40,21 +40,12 @@ MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 MainFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
 MainFrame.BorderSizePixel = 0
 MainFrame.Size = UDim2.new(1, 0, 1, 0)
-MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-MainFrame.Size = UDim2.new(0.9, 0, 0.9, 0)
-
-local UIScale = Instance.new("UIScale")
-UIScale.Parent = MainFrame
-
-local Aspect = Instance.new("UIAspectRatioConstraint")
-Aspect.AspectRatio = 1.77 -- 16:9
-Aspect.Parent = MainFrame
+MainFrame.BackgroundTransparency = 0 -- fully opaque
 
 Title.Name = "Title"
 Title.Parent = MainFrame
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
+Title.BackgroundTransparency = 0 -- fully opaque
 Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Title.Position = UDim2.new(0.183418989, 0, 0.17910701, 0)
 Title.Size = UDim2.new(0.632528603, 0, 0.232815996, 0)
@@ -68,7 +59,7 @@ Title.TextWrapped = true
 Dots.Name = "Dots"
 Dots.Parent = MainFrame
 Dots.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Dots.BackgroundTransparency = 1.000
+Dots.BackgroundTransparency = 0 -- opaque now
 Dots.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Dots.Position = UDim2.new(0.470970035, 0, 0.818612278, 0)
 Dots.Size = UDim2.new(0.0571707934, 0, 0.0360675976, 0)
@@ -89,7 +80,7 @@ InsideDot.AnchorPoint = Vector2.new(0.5, 0.5)
 InsideDot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 InsideDot.BorderColor3 = Color3.fromRGB(27, 42, 53)
 InsideDot.Position = UDim2.new(0.5, 0, 0.5, 0)
-
+InsideDot.BackgroundTransparency = 0 -- opaque
 UICorner_2.CornerRadius = UDim.new(0.5, 0)
 UICorner_2.Parent = InsideDot
 
@@ -109,7 +100,7 @@ InsideDot_2.AnchorPoint = Vector2.new(0.5, 0.5)
 InsideDot_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 InsideDot_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
 InsideDot_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-
+InsideDot_2.BackgroundTransparency = 0
 UICorner_4.CornerRadius = UDim.new(0.5, 0)
 UICorner_4.Parent = InsideDot_2
 
@@ -129,7 +120,7 @@ InsideDot_3.AnchorPoint = Vector2.new(0.5, 0.5)
 InsideDot_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 InsideDot_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
 InsideDot_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-
+InsideDot_3.BackgroundTransparency = 0
 UICorner_6.CornerRadius = UDim.new(0.5, 0)
 UICorner_6.Parent = InsideDot_3
 
@@ -140,6 +131,7 @@ Bar.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Bar.BorderSizePixel = 0
 Bar.Position = UDim2.new(0.219547689, 0, 0.764966607, 0)
 Bar.Size = UDim2.new(0.560904384, 0, 0.0365853645, 0)
+Bar.BackgroundTransparency = 0
 
 Bar2.Name = "Bar2"
 Bar2.Parent = Bar
@@ -147,6 +139,7 @@ Bar2.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Bar2.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Bar2.BorderSizePixel = 0
 Bar2.Size = UDim2.new(0, 0, 1, 0)
+Bar2.BackgroundTransparency = 0
 
 UICorner_7.CornerRadius = UDim.new(0.5, 0)
 UICorner_7.Parent = Bar2
@@ -157,7 +150,7 @@ UICorner_8.Parent = Bar
 Percentage.Name = "Percentage"
 Percentage.Parent = Bar
 Percentage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Percentage.BackgroundTransparency = 1.000
+Percentage.BackgroundTransparency = 0
 Percentage.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Percentage.Position = UDim2.new(0.280816972, 0, 0.0909090936, 0)
 Percentage.Size = UDim2.new(0.438366145, 0, 0.787879348, 0)
@@ -171,7 +164,7 @@ Percentage.TextWrapped = true
 Tip.Name = "Tip"
 Tip.Parent = MainFrame
 Tip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tip.BackgroundTransparency = 1.000
+Tip.BackgroundTransparency = 0 -- opaque
 Tip.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Tip.Position = UDim2.new(0.280816913, 0, 0.717294872, 0)
 Tip.Size = UDim2.new(0.438366145, 0, 0.0299334843, 0)
@@ -189,6 +182,7 @@ EndSequence.BorderColor3 = Color3.fromRGB(27, 42, 53)
 EndSequence.BorderSizePixel = 0
 EndSequence.Position = UDim2.new(1, 0, 0, 0)
 EndSequence.Size = UDim2.new(1, 0, 1, 0)
+EndSequence.BackgroundTransparency = 0 -- fully opaque
 
 -- Scripts:
 
@@ -237,33 +231,3 @@ local function LGGXMQZ_fake_script() -- Percentage.Percentage
 	local script = Instance.new('LocalScript', Percentage)
 
 	wait(5)
-	for i = 1,100 do
-		script.Parent.Text = i.."%"
-		wait(1.2)
-	end
-end
-coroutine.wrap(LGGXMQZ_fake_script)()
-local function EXBN_fake_script() -- Tip.Tips 
-	local script = Instance.new('LocalScript', Tip)
-
-	local tip = script.Parent
-	
-	while true do
-		wait(5)
-		tip.Text = "NorQueloid made this script!"
-		wait(5)
-		tip.Text = "Just wait a couple more minutes and the script will be loaded"
-		wait(5)
-		tip.Text = "This Grow A Garden script is Number 1"
-	end
-end
-coroutine.wrap(EXBN_fake_script)()
-local function FTDN_fake_script() -- Loading.DefaultUI 
-	local script = Instance.new('LocalScript', Loading)
-
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
-end
-coroutine.wrap(FTDN_fake_script)()
