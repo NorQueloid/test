@@ -33,6 +33,8 @@ Loading.Name = "Loading"
 Loading.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Loading.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Loading.ResetOnSpawn = false
+Loading.IgnoreGuiInset = true
+Loading.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = Loading
@@ -42,6 +44,7 @@ MainFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
 MainFrame.BorderSizePixel = 0
 MainFrame.Position = UDim2.new(0, 0, 0, 0)  -- Full screen positioning
 MainFrame.Size = UDim2.new(1, 0, 1, 0)
+MainFrame.ZIndex = 10
 
 Title.Name = "Title"
 Title.Parent = MainFrame
@@ -182,6 +185,7 @@ EndSequence.BorderColor3 = Color3.fromRGB(27, 42, 53)
 EndSequence.BorderSizePixel = 0
 EndSequence.Position = UDim2.new(1, 0, 0, 0)
 EndSequence.Size = UDim2.new(1, 0, 1, 0)
+EndSequence.ZIndex = 10
 
 -- Scripts:
 
