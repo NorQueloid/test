@@ -40,6 +40,16 @@ MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 MainFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
 MainFrame.BorderSizePixel = 0
 MainFrame.Size = UDim2.new(1, 0, 1, 0)
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.Size = UDim2.new(0.9, 0, 0.9, 0)
+
+local UIScale = Instance.new("UIScale")
+UIScale.Parent = MainFrame
+
+local Aspect = Instance.new("UIAspectRatioConstraint")
+Aspect.AspectRatio = 1.77 -- 16:9
+Aspect.Parent = MainFrame
 
 Title.Name = "Title"
 Title.Parent = MainFrame
@@ -182,7 +192,7 @@ EndSequence.Size = UDim2.new(1, 0, 1, 0)
 
 -- Scripts:
 
-local function XBFFH_fake_script() -- Dots.Dots 
+local function CKJP_fake_script() -- Dots.Dots 
 	local script = Instance.new('LocalScript', Dots)
 
 	while true do
@@ -200,8 +210,8 @@ local function XBFFH_fake_script() -- Dots.Dots
 		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
 	end
 end
-coroutine.wrap(XBFFH_fake_script)()
-local function JMQQCP_fake_script() -- MainFrame.Manager 
+coroutine.wrap(CKJP_fake_script)()
+local function NFFBOQ_fake_script() -- MainFrame.Manager 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local bar = script.Parent.Bar
@@ -222,8 +232,8 @@ local function JMQQCP_fake_script() -- MainFrame.Manager
 	wait(3)
 	script.Parent.Parent.Parent.Loading:Destroy()
 end
-coroutine.wrap(JMQQCP_fake_script)()
-local function BVPLQZ_fake_script() -- Percentage.Percentage 
+coroutine.wrap(NFFBOQ_fake_script)()
+local function LGGXMQZ_fake_script() -- Percentage.Percentage 
 	local script = Instance.new('LocalScript', Percentage)
 
 	wait(5)
@@ -232,8 +242,8 @@ local function BVPLQZ_fake_script() -- Percentage.Percentage
 		wait(1.2)
 	end
 end
-coroutine.wrap(BVPLQZ_fake_script)()
-local function TSHFTR_fake_script() -- Tip.Tips 
+coroutine.wrap(LGGXMQZ_fake_script)()
+local function EXBN_fake_script() -- Tip.Tips 
 	local script = Instance.new('LocalScript', Tip)
 
 	local tip = script.Parent
@@ -247,8 +257,8 @@ local function TSHFTR_fake_script() -- Tip.Tips
 		tip.Text = "This Grow A Garden script is Number 1"
 	end
 end
-coroutine.wrap(TSHFTR_fake_script)()
-local function VTCUVWZ_fake_script() -- Loading.DefaultUI 
+coroutine.wrap(EXBN_fake_script)()
+local function FTDN_fake_script() -- Loading.DefaultUI 
 	local script = Instance.new('LocalScript', Loading)
 
 	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
@@ -256,4 +266,4 @@ local function VTCUVWZ_fake_script() -- Loading.DefaultUI
 	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
 	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
 end
-coroutine.wrap(VTCUVWZ_fake_script)()
+coroutine.wrap(FTDN_fake_script)()
